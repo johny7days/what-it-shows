@@ -34,9 +34,3 @@ Support desk. Decision records: whoever signed them.
 ---
 
 Exported 2026-10-04 from the `support` repo, `apps/kb/` → `src/`.
-
-## Added on 2026-10-28
-
-- `src/routes/kb/incidents/4471-split/` — signed page (owner johny7days): #4471 holds three problems, each with its own ticket in this repo's issues.
-- `src/lib/kb/problems.ts`, `src/lib/kb/ProblemTable.svelte` — the logic and the table behind that page.
-- `build/` — the kb as the desk sees it, built with `npm install && npm run build`. The page: `build/kb/incidents/4471-split/index.html`.

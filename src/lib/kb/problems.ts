@@ -9,7 +9,7 @@ export const PROBLEMS: readonly Problem[] = ['parser', 'hint', 'shift'];
 export const PROBLEM_TITLE: Record<Problem, string> = {
   parser: 'Shared parser reads day-first dates month first',
   hint: 'booking-v3 form hints MM/DD but reads the date day first',
-  shift: 'Invites move by one day across time zones',
+  shift: 'Invites land one day off, no date flip',
 };
 
 export function problemOf(r: Report, t: Tenant | undefined, oneDayMove: readonly string[]): Problem | 'unplaced' {

@@ -41,8 +41,8 @@ takes a report out of `parser`. What intake tagged from the reporter's browser p
 ## The three problems
 
 **`parser`: the shared parser reads day-first dates month first.** Every tenant in the
-directory writes the day first. A booking for 7 April comes out as 4 July; a date with a day
-above 12 cannot flip, so only the first twelve days of each month are hit. All channels.
+directory writes the day first. A booking for 7 April comes out as 4 July. In every
+report the day is 12 or less. All channels.
 
 **`hint`: booking-v3 tells people to type MM/DD.** Only through the form, only for tenants on
 booking-v3. People do what the hint says and type the month first; the form reads the date
@@ -51,8 +51,9 @@ the parser. A parser fix alone leaves these reports open.
 
 **`shift`: the invite moves by one day.** No month flips here. Tuesday 12 May shows as
 Monday 11 May; a client in Lisbon got Tuesday while a client in Toronto got Monday for the
-same meeting; one invite arrived before the booking was made. That points at time zones or
-daylight saving, not at date order, and a parser fix will not touch it.
+same meeting; one invite arrived before the booking was made. The reports do not say why;
+time zones or daylight saving are a guess. It is not date order, so a parser fix will not
+touch it.
 
 ## Against the desk's own table
 
