@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../../../_app/immutable/entry/start.Cbe9tbOM.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/DnoyNMba.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/CSzNd4xV.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/DXhvxdpI.js" rel="modulepreload">
+		<link href="../../../_app/immutable/entry/app.BY3ByQpn.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/4HIIzLmj.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/B4WlwwdY.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/CGyox8To.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/gCpT5-Oq.js" rel="modulepreload">
+		<link href="../../../_app/immutable/nodes/0.Cg-FDWb4.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/BHsyMl1J.js" rel="modulepreload">
+		<link href="../../../_app/immutable/nodes/6.BQxyimco.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/CJV3nCAH.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/BMg7KjJ0.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/BlPlYdM-.js" rel="modulepreload">
+		<!--e2jw2j--><!----><title>Triage: duplicate reports · support kb</title>
+		<link href="../../../_app/immutable/assets/runbook.BhhgOc_n.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/Callout.yLErXQDM.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/6.C3mwiGDj.css" rel="stylesheet">
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents"><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">Triage: duplicate reports</h1> <p class="meta svelte-e2jw2j"><span>owner <b>support desk</b></span> <span class="status accepted svelte-e2jw2j">accepted</span> <span class="svelte-e2jw2j stale">reviewed 2024-06-11 · 869 days ago · stale</span></p></header> <!--[0--><p class="banner svelte-e2jw2j">Nobody has re-read this page in 869 days. Check it against the live views before you rely on it.</p><!--]--> <main><p>A busy morning brings hundreds of reports about the same thing. We keep one ticket per issue
+and merge every duplicate into it, so engineering sees one thread with a count.</p> <h2>The rule</h2> <p>A report is a duplicate when its <strong>subject line matches</strong> the subject of an open ticket
+(<a href="/kb/decisions/0001-dedupe-by-subject">decision 0001</a>):</p> <ol><li>lowercase the subject and strip punctuation;</li> <li>look for an open ticket with the same subject;</li> <li>found one: merge the report into it. None: open a new ticket.</li></ol> <aside class="note svelte-17bri61"><!---->Matching on subject is fast and needs no reading. During an incident that matters more than
+anything else.<!----></aside><!----> <h2>Try it</h2> <div class="try svelte-gq0h2h"><!--[--><fieldset class="svelte-gq0h2h"><legend>report A</legend> <select aria-label="tenant"><!--[--><option selected="">alder.physio</option><option>copper.studio</option><option>harbour.dental</option><option>kettle.books</option><option>lantern.row</option><option>long.table</option><option>morrow.tax</option><option>nine.lanterns</option><option>pale.harbour</option><option>ridge.clinic</option><option>stone.and.sons</option><!--]--></select> <select aria-label="channel"><!--[--><option>app</option><option>email</option><option selected="">form</option><!--]--></select> <input value="Booking on the wrong date" aria-label="subject"/> <code>hint</code></fieldset><fieldset class="svelte-gq0h2h"><legend>report B</legend> <select aria-label="tenant"><!--[--><option>alder.physio</option><option>copper.studio</option><option>harbour.dental</option><option selected="">kettle.books</option><option>lantern.row</option><option>long.table</option><option>morrow.tax</option><option>nine.lanterns</option><option>pale.harbour</option><option>ridge.clinic</option><option>stone.and.sons</option><!--]--></select> <select aria-label="channel"><!--[--><option>app</option><option>email</option><option selected="">form</option><!--]--></select> <input value="Booking on the wrong date" aria-label="subject"/> <code>parser</code></fieldset><!--]--> <p class="verdict svelte-gq0h2h">different causes — keep apart</p></div> <table><thead><tr><th>case</th><th>same subject</th><th>same cause</th></tr></thead><tbody><!--[--><tr><td>app vs email, same tenant</td><td>no</td><td class="svelte-gq0h2h dup">yes</td></tr><tr><td>same subject, same tenant, different channel</td><td>yes</td><td class="svelte-gq0h2h">no</td></tr><tr><td>same subject, same channel, different tenant</td><td>yes</td><td class="svelte-gq0h2h">no</td></tr><tr><td>different subject, same way in</td><td>no</td><td class="svelte-gq0h2h dup">yes</td></tr><tr><td>no tenant on file</td><td>yes</td><td class="svelte-gq0h2h">no</td></tr><!--]--></tbody></table><!----> <h2>When you are unsure</h2> <p>Merge. Splitting a ticket later is cheaper than two engineers chasing the same bug.</p><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1wqs0i9 = {
+						base: new URL("../../..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../../_app/immutable/entry/start.Cbe9tbOM.js"),
+						import("../../../_app/immutable/entry/app.BY3ByQpn.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 6],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

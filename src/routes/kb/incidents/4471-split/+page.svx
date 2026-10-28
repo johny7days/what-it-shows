@@ -1,0 +1,70 @@
+---
+layout: runbook
+title: '#4471 · three problems, not one'
+owner: johny7days
+status: proposed
+reviewed: 2026-10-28
+signature: johny7days
+---
+
+<script>
+  import ProblemTable from '#lib/kb/ProblemTable.svelte';
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+[#4471](/kb/incidents/4471) is marked known: one issue, one fix queued. Its reports say otherwise.
+They were merged on subject line alone ([decision 0001](/kb/decisions/0001-dedupe-by-subject)),
+so three different bugs ended up in one ticket. One fix for the parser will close only the
+first of them.
+
+<Callout kind="warn">
+Each problem below has its own ticket now. Link new reports to the ticket of their cause, not to #4471.
+</Callout>
+
+## What #4471 holds
+
+<ProblemTable
+  ticket={4471}
+  issues={{
+    parser: 'https://github.com/johny7days/what-it-shows/issues/1',
+    hint: 'https://github.com/johny7days/what-it-shows/issues/2',
+    shift: 'https://github.com/johny7days/what-it-shows/issues/3',
+  }}
+/>
+
+The table counts each report once (the export repeats some) and places it by its tenant and
+the way it came in, as `#lib/kb/causes` does. The desk's one-day reading in `desk-notes.json`
+takes a report out of `parser`. What intake tagged from the reporter's browser plays no part.
+
+## The three problems
+
+**`parser`: the shared parser reads day-first dates month first.** Every tenant in the
+directory writes the day first. A booking for 7 April comes out as 4 July; a date with a day
+above 12 cannot flip, so only the first twelve days of each month are hit. All channels.
+
+**`hint`: booking-v3 tells people to type MM/DD.** Only through the form, only for tenants on
+booking-v3. People do what the hint says and type the month first; the form reads the date
+the tenant's way, day first. The dates flip like `parser`, but the fix is the form's hint, not
+the parser. A parser fix alone leaves these reports open.
+
+**`shift`: the invite moves by one day.** No month flips here. Tuesday 12 May shows as
+Monday 11 May; a client in Lisbon got Tuesday while a client in Toronto got Monday for the
+same meeting; one invite arrived before the booking was made. That points at time zones or
+daylight saving, not at date order, and a parser fix will not touch it.
+
+## Against the desk's own table
+
+<CauseTable ticket={4471} />
+
+The desk's table already sees `hint` as not belonging to #4471. It still counts the one-day
+moves inside `parser` and only footnotes them.
+
+## For the desk
+
+- Merge by cause, not by subject: the same subject covers all three problems.
+- Keep #4471 for `parser` only, or close it in favour of its ticket.
+- Re-run this page after the next export: every number here is computed.
+
+<RenderStamp {signature} />
