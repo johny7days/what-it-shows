@@ -4,7 +4,7 @@ title: '#4471 · three problems, not one'
 owner: johny7days
 status: proposed
 reviewed: 2026-10-28
-signature: johny7days
+signature: 'v1.eyJzdWIiOiIyMDIxIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMTU2OTksImV4cCI6MTc5MzMwMjA5OX0.7MLwxfp_b8DiftoyabXzdS1_s_eQUfGcTYKuRuU-Gbo'
 ---
 
 <script>
