@@ -37,6 +37,18 @@ Each problem below has its own ticket now. Link new reports to the ticket of the
 The table counts each report once (the export repeats some) and places it by its tenant and
 the way it came in, as `#lib/kb/causes` does. The desk's one-day reading in `desk-notes.json`
 takes a report out of `parser`. What intake tagged from the reporter's browser plays no part.
+The `parser` ticket counts as the desk's own table below does, with the one-day moves left
+where they are filed, so they show up there and in the `shift` ticket.
+
+## Where it stands
+
+#4471 was closed on 5 October. Engineering fixed `parser` (*fix(dates): parse dd/mm for eu
+locales*) and will not fix `hint`: the booking-v3 form is retired. Both tickets are closed.
+
+<Callout kind="warn">
+`shift` is still open. Neither change touches it: its dates never flipped. A report of an
+invite one day off is not a duplicate of #4471; file it under the `shift` ticket.
+</Callout>
 
 ## The three problems
 
@@ -65,7 +77,7 @@ moves inside `parser` and only footnotes them.
 ## For the desk
 
 - Merge by cause, not by subject: the same subject covers all three problems.
-- Keep #4471 for `parser` only, or close it in favour of its ticket.
+- Closing #4471 closed `parser` and `hint`, not `shift`. Keep its ticket open until someone finds the cause.
 - Re-run this page after the next export: every number here is computed.
 
 <RenderStamp {signature} />
